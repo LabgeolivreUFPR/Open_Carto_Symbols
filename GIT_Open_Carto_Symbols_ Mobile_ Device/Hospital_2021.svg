@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg3942"
+   width="17"
+   height="17"
+   viewBox="0 0 17 17"
+   sodipodi:docname="cruz_red_15px_branco.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata3948">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3946" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview3944"
+     showgrid="false"
+     inkscape:zoom="18.084034"
+     inkscape:cx="5.5522667"
+     inkscape:cy="10.214055"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3942"
+     inkscape:pagecheckerboard="true" />
+  <path
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#00a700;stroke-width:0.09957984;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+     d="m 5.4405229,13.740084 0.055297,-2.114009 -2.1157452,-0.05613 H 0.15838236 L 0.10308536,8.414548 0.04778836,5.4275229 H 3.2694807 5.5511185 L 5.6064155,3.2436278 V -0.00666438 H 8.4593509 11.533477 V 3.2436278 5.7081537 h 2.161124 3.322369 v 2.7063943 3.211527 h -3.322369 -1.884637 v 2.057883 3.348785 H 8.4593509 l -3.018828,0.05613 z"
+     id="path3956"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccccccccccccccccscccc" />
+  <path
+     style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#00a700;stroke-width:0.08756904;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+     d="M 6.9136184,13.098911 V 10.16076 H 4.0740251 1.2344321 V 8.4756442 6.7905281 h 2.839593 2.8395933 V 3.9387929 1.0870582 h 1.7303768 1.7303778 v 2.8517347 2.8517352 h 2.883959 2.883963 V 8.4756442 10.16076 h -2.883963 -2.883959 v 2.938151 2.93815 H 8.6439952 6.9136184 Z"
+     id="path816-4"
+     inkscape:connector-curvature="0" />
+</svg>

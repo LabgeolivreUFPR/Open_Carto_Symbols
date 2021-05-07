@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="17"
+   height="17"
+   viewBox="0 0 12.749999 12.749999"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg8"
+   sodipodi:docname="RTR_Semaforo_15px_branco.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview10"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="31.289476"
+     inkscape:cx="8.0116293"
+     inkscape:cy="8.3134503"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8"
+     inkscape:pagecheckerboard="true" />
+  <metadata
+     id="metadata2">
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <ellipse
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#fcffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="path4763"
+     cx="6.3759451"
+     cy="1.9156862"
+     rx="2.9722452"
+     ry="1.8696381" />
+  <rect
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#fcffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect4783"
+     width="7.7182493"
+     height="11.121949"
+     x="2.492851"
+     y="1.1965945" />
+  <rect
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#fcffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect4785"
+     width="4.8179135"
+     height="3.1640029"
+     x="4.002943"
+     y="9.5859957" />
+  <g
+     style="fill:#000000;stroke:none"
+     id="g828-1-8"
+     transform="matrix(0.00271257,0,0,-0.00222164,-0.52028853,12.275384)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path826-3-7"
+       d="m 2330,5104 c -167,-30 -326,-97 -413,-175 -44,-38 -91,-118 -102,-171 l -5,-28 h -165 -165 l 2,-2242 3,-2243 303,-3 302,-2 V 120 0 h 470 470 v 120 120 l 303,2 302,3 3,2243 2,2242 h -165 -165 l -5,28 c -11,53 -58,133 -102,171 -90,80 -247,145 -420,176 -108,18 -348,18 -453,-1 z m 359,-709 c 171,-45 320,-187 372,-354 23,-76 28,-210 9,-281 -35,-129 -145,-272 -258,-333 -61,-33 -188,-67 -252,-67 -64,0 -191,34 -252,67 -113,61 -223,204 -258,333 -19,71 -14,205 9,281 52,165 200,308 368,354 65,18 196,18 262,0 z m 12,-1311 c 91,-27 151,-64 225,-138 107,-107 157,-222 157,-366 0,-287 -237,-523 -523,-523 -286,0 -523,236 -523,523 0,160 70,303 197,406 60,49 101,71 176,95 72,23 217,25 291,3 z m 23,-1354 c 87,-30 142,-65 211,-136 101,-104 147,-219 147,-364 -1,-154 -61,-284 -180,-390 -196,-175 -488,-175 -684,0 -119,106 -179,236 -180,390 0,97 12,150 52,232 73,147 211,253 375,288 61,14 193,3 259,-20 z" />
+  </g>
+</svg>

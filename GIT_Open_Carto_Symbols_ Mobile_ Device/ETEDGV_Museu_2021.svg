@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333332 4.2333334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Museu.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.8125"
+     inkscape:cx="7.2368934"
+     inkscape:cy="8.3803216"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="false"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#000000;stroke:#ffffff;stroke-width:0.0920964;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0.22949626,2.5362134 V 1.4397388 H 0.49838317 0.76726996 V 2.5362134 3.632688 H 0.49838317 0.22949626 Z m 1.06658464,0 V 1.4397388 H 1.5604864 1.8248917 V 2.5362134 3.632688 H 1.5604864 1.2960809 Z m 1.0576216,0 V 1.4397388 H 2.6181078 2.8825132 V 2.5362134 3.632688 H 2.6181078 2.3537025 Z m 1.0576216,0 V 1.4397388 H 3.6757294 3.9401349 V 2.5362134 3.632688 H 3.6757294 3.4113241 Z M 0.1179083,1.2994492 C 0.1225913,1.2946192 0.56740828,1.0164995 1.1063904,0.68139999 L 2.0863578,0.0721282 3.0154871,0.65025106 C 3.5265081,0.96821874 3.972849,1.2462746 4.0073568,1.268153 l 0.062739,0.039779 -1.980352,1.475e-4 C 1.00055,1.3081636 0.11322335,1.3042862 0.11790655,1.2994445 Z"
+       id="path856"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccscsccccc" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.102329;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="rect855"
+       width="3.7124252"
+       height="0.35141036"
+       x="0.24108496"
+       y="3.7420802" />
+  </g>
+</svg>
