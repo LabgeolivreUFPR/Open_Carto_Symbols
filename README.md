@@ -18,7 +18,7 @@
 
 #Para mais iformações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/65793)
 
-# Open Cartographic Symbols - Desenvolvido por Pisetta
+# Open Cartographic Symbols - Desenvolvido por Jaqueline Alves Pisetta
 
 #Pasta GIT_Open_Carto_Symbols_Pisetta_2021
 
@@ -26,4 +26,4 @@
 
 #A estrutura de dados adotada é a ET-EDGV 3.0 e foi adaptada a partir dos simbolos pictóricos testados e validados na pesquisa de Silveira(2019)
 
-#Para mais iformações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/72265) e o [dissertação](https://doi.org/10.1080/23729333.2023.2207328) relacionado a pesquisa.
+#Para mais iformações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/72265) e o [artigo](https://doi.org/10.1080/23729333.2023.2207328) relacionado a pesquisa.
