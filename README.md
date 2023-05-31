@@ -1,6 +1,6 @@
 # Open_Carto_Symbols
 
-#Este projeto apresenta uma sequência de pesquisas voltadas ao aperfeiçoamento e estudo de simbolos pictóricos em mapas de referência, tanto para interfaces de mapas representados em dispositivos Desktop e Mobile.
+#Este projeto apresenta uma sequência de pesquisas voltadas ao aperfeiçoamento e estudo de símbolos pictóricos em mapas topográficos, para interfaces de mapas representados em dispositivos Desktop e Mobile.
 
 #As pesquisas foram conduzidas por alunas do curso de Pós-Graduação em Ciências Geodésicas da UFPR, na área de concentração de Cartografia e SIG, no âmbito do Laboratório Geoespacial Livre da Universidade Federal do Paraná (UFPR), que também está ligado ao curso de Graduação em Engenharia Cartográfica e de Agrimensura.
 
@@ -10,21 +10,21 @@
 
 # Open Cartographic Symbols - Desenvolvido por Flávia Silveira 
 
-#Pasta GIT_Open_Carto_Symbols_Silveira_2019
+#Pasta GIT_Open_Carto_Symbols_Silveira_2019.
 
 #Este projeto visa promover o compartilhamento de símbolos cartográficos para o mapeamento topográfico em escalas 1:25.000 e superiores.
 
-#A estrutura de dados adotada é a ET-EDGV 3.0
+#A estrutura de dados adotada é a ET-EDGV 3.0.
 
-#Para mais iformações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/65793)
+#Para mais informações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/65793)
 
 # Open Cartographic Symbols - Desenvolvido por Jaqueline Alves Pisetta
 
 #Pasta GIT_Open_Carto_Symbols_Pisetta_2021
 
-#Simbolos adaptados para representação em interfaces de dispositivos móveis.
+#Símbolos adaptados para representação em interfaces de dispositivos móveis.
 
-#A estrutura de dados adotada é a ET-EDGV 3.0 e foi adaptada a partir dos simbolos pictóricos testados e validados na pesquisa de Silveira(2019)
+#A estrutura de dados adotada é a ET-EDGV 3.0 e foi adaptada a partir dos símbolos pictóricos testados e validados na pesquisa de Silveira(2019)
 
-#Para mais iformações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/72265) e o [artigo](https://doi.org/10.1080/23729333.2023.2207328) relacionado a pesquisa.
+#Para mais informações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/72265) e o [artigo](https://doi.org/10.1080/23729333.2023.2207328) relacionados a pesquisa.
 
