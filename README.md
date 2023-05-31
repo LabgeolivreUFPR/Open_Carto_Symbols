@@ -28,4 +28,3 @@
 
 #Para mais iformações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/72265) e o [artigo](https://doi.org/10.1080/23729333.2023.2207328) relacionado a pesquisa.
 
-#Para mais iformações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/72265) e o [dissertação](https://doi.org/10.1080/23729333.2023.2207328) relacionado a pesquisa.
