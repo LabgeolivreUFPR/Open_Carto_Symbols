@@ -32,4 +32,4 @@
 
 #Pasta GIT_Open_Carto_Symbols_Ramos_2023
 
-
+#Para mais informações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/82596)
