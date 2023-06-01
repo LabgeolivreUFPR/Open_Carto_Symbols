@@ -32,4 +32,6 @@
 
 #Pasta GIT_Open_Carto_Symbols_Ramos_2023
 
+#Este projeto visa promover o compartilhamento de símbolos pictóricos desenvolvidos a partir do designer colaborativo para o mapeamento topográfico em escalas 1:25.000, 1:10.000 e 1:2.000.
+
 #Para mais informações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/82596)
