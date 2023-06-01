@@ -28,3 +28,8 @@
 
 #Para mais informações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/72265) e o [artigo](https://doi.org/10.1080/23729333.2023.2207328) relacionados a pesquisa.
 
+# Open Cartographic Symbols - Desenvolvido por Thais Silva Ramos
+
+#Pasta GIT_Open_Carto_Symbols_Ramos_2023
+
+
