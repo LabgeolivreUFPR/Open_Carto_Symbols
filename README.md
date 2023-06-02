@@ -16,7 +16,7 @@
 
 #A estrutura de dados adotada é a ET-EDGV 3.0.
 
-#Para mais informações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/65793)
+#Para mais informações acesse a [dissertação](https://acervodigital.ufpr.br/handle/1884/65793) e [artigo](https://seer.ufu.br/index.php/revistabrasileiracartografia/article/view/57110)
 
 # Open Cartographic Symbols - Desenvolvido por Jaqueline Alves Pisetta
 
