@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RJ25 - Vector Tiles</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.5.0/css/ol.css" />
+  <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.5.0/build/ol.js"></script>
+  <style>
+    #map {
+      width: 100%;
+      height: 700px;
+      position: relative;
+    }
+    #coordinates {
+      position: absolute;
+      bottom: 10px; /* Ajuste para dar espaço para o elemento de informações */
+      left: 12%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 5px;
+      border: 1px solid black;
+	  font-size: 15px;
+      z-index: 1000; /* Garante que o texto fique acima de outras camadas */
+    }
+    #info {
+      position: absolute;
+      bottom: 10px; /* Ajuste conforme necessário */
+      left: 92%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 5px;
+      border: 1px solid black;
+      font-size: 12px;
+      z-index: 1000; /* Garante que o texto fique acima de outras camadas */
+    }
+  </style>
+  </head>
+<body>
+  <div id="map"></div>
+  <div id="coordinates">Coordenadas:</div>
+  <div id="info">
+    Fonte: IBGE - RJ25<br>
+  </div>
+  <!-- Incluir os arquivos de estilo das camadas -->
+  <script src="limite.js"></script>
+  <script src="campo.js"></script>
+  <script src="brejo.js"></script>
+  <script src="mangue.js"></script>
+  <script src="floresta.js"></script>
+  <script src="restinga.js"></script>
+  <script src="cultivada.js"></script>
+  <script src="area_edif.js"></script>
+  <script src="elema.js"></script>
+  <script src="ensino.js"></script>
+  <script src="cemiterio.js"></script>
+  <script src="capital.js"></script>
+  <script src="cidade.js"></script>
+  <script src="vila.js"></script>
+  <script src="aglomerado.js"></script>
+  <script src="pontocotado.js"></script>
+  <script src="elemp.js"></script>
+  <script src="nomelocal.js"></script>
+  <script src="rodovia.js"></script>
+  <script src="ferrovia.js"></script>
+  <script src="arruamento.js"></script>
+  <script src="hidrografia.js"></script>
+  <script src="curva.js"></script>
+  <script src="ponte.js"></script>
+  <script src="pistapouso.js"></script>
+  <script src="rocha.js"></script>
+  <script src="trechomassa.js"></script>
+  <script src="tsi.js"></script>
+  <script src="massa.js"></script>
+  <script src="ilha.js"></script>
+  <script src="trechoener.js"></script>
+  <script src="areaener.js"></script>
+  <script src="mineral.js"></script>
+  <script src="policia.js"></script>
+  <script src="edifpubmil.js"></script>
+  <script src="quadra.js"></script>
+  
+</head>
+<body>
+  <div id="map" style="width: 100%; height: 700px;"></div>
+</body>
+</html>
+
+<script>
+  // Camadas Vector Tiles
+  var vectorTileLayers = [
+    {
+      styleFunction: limiteFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:lim_limite_politico_administrativo_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: tsiFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:hid_terreno_sujeito_inundacao_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: elemaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:rel_elemento_fisiografico_natural_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: area_edifFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:loc_area_edificada_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+  	{
+      styleFunction: restingaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:veg_veg_restinga_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: cultivadaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:veg_veg_cultivada_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: mangueFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:veg_mangue_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: florestaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:veg_floresta_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: brejoFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:veg_brejo_pantano_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: campoFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:veg_campo_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: rochaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:rel_rocha_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: hidrografiaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:hid_trecho_drenagem_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: massaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:hid_massa_dagua_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: trechomassaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:hid_trecho_massa_dagua_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: ilhaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:hid_ilha_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: curvaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:rel_curva_nivel_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: pontocotadoFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:rel_ponto_cotado_altimetrico_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: trechoenerFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:enc_trecho_energia_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: areaenerFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:enc_area_energia_eletrica_a@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: pistapousoFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:tra_pista_ponto_pouso_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: rodoviaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:tra_trecho_rodoviario_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: ferroviaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:tra_trecho_ferroviario_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: arruamentoFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:tra_arruamento_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: ponteFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:tra_ponte_l@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: elempFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:rel_elemento_fisiografico_natural_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: cemiterioFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:asb_cemiterio_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: ensinoFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:edu_edif_ensino_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: policiaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:adm_posto_pol_rod_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: edifpubmilFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:adm_edif_pub_militar_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: mineralFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:eco_ext_mineral_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: nomelocalFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:loc_nome_local_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: cidadeFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:loc_cidade_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: capitalFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:loc_capital_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: vilaFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:loc_vila_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: aglomeradoFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:loc_aglomerado_rural_isolado_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	{
+      styleFunction: quadraFunction,
+      url: 'http://200.17.225.210:8080/geoserver/gwc/service/tms/1.0.0/topo:edu_campo_quadra_p@EPSG:900913@pbf/{z}/{x}/{-y}.pbf'
+    },
+	
+    // Adicione mais camadas aqui conforme necessário
+  ];
+
+  // Criar as camadas e adicionar ao mapa
+   var map = new ol.Map({
+      target: 'map',
+      view: new ol.View({
+        center: [-4786064, -2619433],
+        zoom: 14,
+        maxZoom: 14, // Define o nível máximo de zoom
+        minZoom: 14  // Define o nível mínimo de zoom (mantém o zoom fixo)
+      }),
+      controls: ol.control.defaults({ // Remove todos os controles padrão
+        attribution: false, // Remove o controle de atribuição
+        zoom: false, // Remove o controle de zoom
+        rotate: false, // Remove o controle de rotação
+        overviewMap: false, // Remove o controle do mapa geral
+        scaleLine: false, // Remove a linha de escala
+        zoomslider: false // Remove o controle deslizante de zoom, se estiver presente
+      }),
+      layers: vectorTileLayers.map(function (layerInfo) {
+        return new ol.layer.VectorTile({
+          style: layerInfo.styleFunction,
+          source: new ol.source.VectorTile({
+            tilePixelRatio: 1,
+            tileGrid: ol.tilegrid.createXYZ({maxZoom: 14}),
+            format: new ol.format.MVT(),
+            url: layerInfo.url
+          })
+        });
+      }),
+      interactions: ol.interaction.defaults({ // Remove as interações padrão, exceto o arrastar
+        dragPan: true,
+        pinchRotate: false,
+        pinchZoom: false
+      }).extend([
+        new ol.interaction.MouseWheelZoom({
+          duration: 0
+        })
+      ])
+    });
+
+    // Adicionar um listener para o movimento do ponteiro
+    map.on('pointermove', function (evt) {
+      const coordinate = evt.coordinate;
+      const transformedCoord = ol.proj.toLonLat(coordinate); // Converter para coordenadas de longitude e latitude
+      document.getElementById('coordinates').innerText =
+        `Latitude: ${transformedCoord[1].toFixed(4)}, Longitude: ${transformedCoord[0].toFixed(4)}`;
+    });
+  </script>
+</body>
+</html>

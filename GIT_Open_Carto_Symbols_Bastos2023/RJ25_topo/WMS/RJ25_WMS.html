@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RJ25 - WMS</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.5.0/css/ol.css" />
+  <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v6.5.0/build/ol.js"></script>
+  <style>
+    #map {
+      width: 100%;
+      height: 700px;
+      position: relative;
+    }
+    #coordinates {
+      position: absolute;
+      bottom: 10px; /* Ajuste para dar espaço para o elemento de informações */
+      left: 12%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 5px;
+      border: 1px solid black;
+	  font-size: 15px;
+      z-index: 1000; /* Garante que o texto fique acima de outras camadas */
+    }
+    #info {
+      position: absolute;
+      bottom: 10px; /* Ajuste conforme necessário */
+      left: 92%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 5px;
+      border: 1px solid black;
+      font-size: 12px;
+      z-index: 1000; /* Garante que o texto fique acima de outras camadas */
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="coordinates">Coordenadas:</div>
+  <div id="info">
+    Fonte: IBGE - RJ25<br>
+  </div>
+
+  <script>
+    // URL do GeoServer
+    const geoServerUrl = 'http://200.17.225.210:8080/geoserver/topo/wms?service=WMS';
+
+    // Namespace do workspace
+    const workspace = 'topo';
+
+    // Lista de nomes das camadas WMS no GeoServer
+    const layerNames = [
+      'lim_limite_politico_administrativo_l', 'veg_brejo_pantano_a', 'veg_campo_a', 'veg_floresta_a',
+      'veg_mangue_a', 'veg_veg_cultivada_a', 'veg_veg_restinga_a', 'hid_terreno_sujeito_inundacao_a',
+      'hid_ilha_a', 'rel_rocha_a', 'rel_elemento_fisiografico_natural_a', 'loc_area_edificada_a',
+      'rel_ponto_cotado_altimetrico_p', 'tra_arruamento_l', 'enc_area_energia_eletrica_a',
+      'hid_trecho_drenagem_l', 'rel_curva_nivel_l', 'hid_trecho_massa_dagua_a', 'hid_massa_dagua_a', 'enc_trecho_energia_l',
+      'tra_trecho_ferroviario_l', 'tra_pista_ponto_pouso_l', 'tra_trecho_rodoviario_l',
+      'tra_ponte_l', 'rel_elemento_fisiografico_natural_p', 'tra_pista_ponto_pouso_p', 'edu_campo_quadra_p',
+      'enc_antena_comunic_p', 'eco_ext_mineral_p', 'adm_edif_pub_militar_p', 'adm_posto_pol_rod_p',
+      'asb_cemiterio_p', 'edu_edif_ensino_p', 'loc_aglomerado_rural_isolado_p', 'loc_capital_p',
+      'loc_cidade_p', 'loc_nome_local_p', 'loc_vila_p'
+    ];
+
+    // Projeção do mapa (geralmente 'EPSG:4326' ou 'EPSG:3857')
+    const projection = 'EPSG:3857';
+
+    // Criar a fonte WMS para cada camada
+    const wmsSources = layerNames.map(layerName => new ol.source.TileWMS({
+      url: `${geoServerUrl}/${workspace}/wms`,
+      params: {
+        'LAYERS': `${workspace}:${layerName}`,
+        'TILED': true,
+      },
+      serverType: 'geoserver',
+      projection: projection,
+    }));
+
+    // Criar a camada de grupo (grupo de camadas) com as camadas WMS
+    const wmsLayerGroup = new ol.layer.Group({
+      layers: wmsSources.map(source => new ol.layer.Tile({
+        source: source,
+        opacity: 1, // Defina a opacidade conforme necessário
+      })),
+    });
+
+    // Criar o mapa e adicionar o grupo de camadas WMS
+    const map = new ol.Map({
+      target: 'map',
+      layers: [wmsLayerGroup],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([-43.0, -22.9]), // Substitua pelos valores do centro do seu mapa
+        zoom: 14, // Ajuste o nível de zoom conforme necessário
+        projection: projection,
+        maxZoom: 14,
+        minZoom: 14
+      }),
+      controls: ol.control.defaults({ zoom: false }).extend([])
+    });
+
+    // Adicionar um listener para o movimento do ponteiro
+    map.on('pointermove', function (evt) {
+      const coordinate = evt.coordinate;
+      const transformedCoord = ol.proj.toLonLat(coordinate); // Converter para coordenadas de longitude e latitude
+      document.getElementById('coordinates').innerText =
+        `Latitude: ${transformedCoord[1].toFixed(4)}, Longitude: ${transformedCoord[0].toFixed(4)}`;
+    });
+  </script>
+</body>
+</html>
